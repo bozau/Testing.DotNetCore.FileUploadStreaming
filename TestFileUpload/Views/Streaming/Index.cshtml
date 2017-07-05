@@ -1,0 +1,53 @@
+﻿@model TestFileUpload.Models.FileUploadRequest
+
+
+<h2>Upload files using Ajax and multipart/form-data</h2>
+<form asp-area="" enctype="multipart/form-data" asp-controller="Streaming" asp-action="StreamUpload" asp-route-returnurl="@ViewData[ "ReturnUrl" ]" id="submit-file-form" method="post">
+    <div>
+        <div>
+            @*<ul>
+                    <li id="errorMessages" class="error" data-ng-repeat="e in errors">
+                        {{e}}
+                    </li>
+                </ul>*@
+            <div>
+                <div>
+                    <label asp-for="Name" class=""></label>
+                    <input asp-for="Name" placeholder="Full Name" class="form-control"/>
+                </div>
+                <br />
+                <div>
+                    <label asp-for="Age" class=""></label>
+                    <input asp-for="Age" placeholder="Age" class="form-control"/>
+                </div>
+                <br />
+                <div>
+                    <label asp-for="Zipcode" class=""></label>
+                    <input asp-for="Zipcode" placeholder="Zipcode" class="form-control" />
+                </div>
+                <br />
+                <div>
+                    <label>Curriculum Vitae</label>
+                    <div>
+                        <input name="CurriculumVitae" type="file" id="file" />
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <button type="submit">Create User</button>
+                    @*<button ng-click="createUser()">Create User</button>*@
+                </div>
+                @*<br />
+                <div ng-show="showUploadStatus">
+                    <b><span ng-bind="uploadStatus"></span></b>
+                </div>*@
+                @*<div ng-show="showUploadedData">
+                    <b>Name:</b> <span ng-bind="uploadedData.name"></span><br />
+                    <b>Age:</b><span ng-bind="uploadedData.age"></span><br />
+                    <b>Zipcode:</b> <span ng-bind="uploadedData.zipcode"></span><br />
+                    <b>File:</b> <span ng-bind="uploadedData.filePath"></span>
+                </div>*@
+            </div>
+        </div>
+    </div>
+    </form>
